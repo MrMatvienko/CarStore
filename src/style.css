@@ -31,7 +31,9 @@ img {
 }
 
 .container {
+  min-width: 320px;
   max-width: 1240px;
   padding-left: 100px;
   padding-right: 100px;
+  margin: 0 auto;
 }
