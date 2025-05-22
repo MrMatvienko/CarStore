@@ -1,3 +1,4 @@
+@import url(./CSS/admin.css);
 @import url(./CSS/header.css);
 html {
   scroll-behavior: smooth;
