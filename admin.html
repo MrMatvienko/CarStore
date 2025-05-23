@@ -8,10 +8,16 @@
     <title>CarStore Admin</title>
   </head>
   <body>
-    <header class="header_admin container">ADMIN PANEL</header>
+    <header class="header_admin">
+      <div class="header_wraper">ADMIN PANEL</div>
+    </header>
     <section class="form_section-add container">
       <form class="form__add-car">
         <span>ADD NEW CAR</span>
+        <div class="form_label-wraper">
+          <label for="id_number">ID</label>
+          <input type="text" name="id_number" id="id_number" />
+        </div>
         <div class="form_label-wraper">
           <label for="brand">Brand</label>
           <input type="text" name="brand" id="brand" />
@@ -37,7 +43,7 @@
           <input type="text" name="gearbox" id="gearbox" />
         </div>
 
-        <button>+add</button>
+        <button class="add_btn">+add</button>
       </form>
     </section>
   </body>
