@@ -8,22 +8,34 @@
     <title>CarStore Admin</title>
   </head>
   <body>
-    <header class="container">ADMIN PANEL</header>
-    <section class="container">
+    <header class="header_admin container">ADMIN PANEL</header>
+    <section class="form_section-add container">
       <form class="form__add-car">
         <span>ADD NEW CAR</span>
-        <label for="brand">Brand</label>
-        <input type="text" name="brand" id="brand" />
-        <label for="model">Model</label>
-        <input type="text" name="model" id="model" />
-        <label for="year">Year</label>
-        <input type="text" name="year" id="year" />
-        <label for="volume">Engine volume</label>
-        <input type="text" name="volume" id="volume" />
-        <label for="type">Type car</label>
-        <input type="text" name="type" id="type" />
-        <label for="gearbox">Type of gearbox</label>
-        <input type="text" name="gearbox" id="gearbox" />
+        <div class="form_label-wraper">
+          <label for="brand">Brand</label>
+          <input type="text" name="brand" id="brand" />
+        </div>
+        <div class="form_label-wraper">
+          <label for="model">Model</label>
+          <input type="text" name="model" id="model" />
+        </div>
+        <div class="form_label-wraper">
+          <label for="year">Year</label>
+          <input type="text" name="year" id="year" />
+        </div>
+        <div class="form_label-wraper">
+          <label for="volume">Engine volume</label>
+          <input type="text" name="volume" id="volume" />
+        </div>
+        <div class="form_label-wraper">
+          <label for="type">Type car</label>
+          <input type="text" name="type" id="type" />
+        </div>
+        <div class="form_label-wraper">
+          <label for="gearbox">Type of gearbox</label>
+          <input type="text" name="gearbox" id="gearbox" />
+        </div>
 
         <button>+add</button>
       </form>

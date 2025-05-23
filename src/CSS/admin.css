@@ -1,6 +1,13 @@
+.header_admin {
+  padding: 10px 0px;
+  background-color: rgb(120, 163, 211);
+}
+.form_section-add {
+  padding: 30px 0px;
+}
 .form__add-car {
-  max-width: 360px;
-  padding: 10px;
+  width: 100%;
+  padding: 20px;
   border: 1px solid black;
   border-radius: 10px;
   display: flex;
@@ -8,4 +15,18 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+.form_label-wraper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.form_label-wraper label {
+  max-width: 200px;
+  width: 100%;
+}
+.form_label-wraper input {
+  max-width: 500px;
+  width: 100%;
 }
