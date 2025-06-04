@@ -1,6 +1,7 @@
 @import url(./CSS/admin.css);
 @import url(./CSS/header.css);
 @import url(./CSS/hero.css);
+@import url(./CSS/about.css);
 
 :root {
   --black: #000c1f;
