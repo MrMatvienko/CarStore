@@ -4,14 +4,50 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./src/style.css" />
     <title>CarStore</title>
   </head>
   <body>
     <header class="header">
-      <a href="/CarStore/admin/">ADMIN</a>
+      <div class="header_wrapper container">
+        <img src="./src/image/header/header-logo.png" alt="logo" />
+        <div>
+          <div class="heade_nav-wrapper">
+            <ul class="header_contact-list">
+              <li class="header_list-contact">
+                <a href="#">1010 N 20th avenue Unit G Hollywood, FL 33020</a>
+              </li>
+              <li><a href="#">+1 305 922 40 50</a></li>
+            </ul>
+          </div>
+          <nav>
+            <ul class="header_nav-list">
+              <li><a class="header_nav-link" href="#">Home</a></li>
+              <li><a class="header_nav-link" href="#">About us</a></li>
+              <li><a class="header_nav-link" href="#">Car for sale</a></li>
+              <li><a class="header_nav-link" href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </header>
-    <section class="hero container"></section>
+    <section class="hero container">
+      <div>
+        <h1 class="hero_title">Every car just $3000</h1>
+        <p class="hero_text">
+          Inspected, ready-to-drive, and backed by our buy-back program.
+        </p>
+        <p class="hero_text">Own it, drive it, return it — it’s that simple.</p>
+        <button class="hero_btn">Buy now</button>
+      </div>
+      <div><img src="./src/image/hero/hero-img.png" alt="spead" /></div>
+    </section>
     <section class="about container"></section>
     <section class="car container"></section>
     <section class="more container"></section>

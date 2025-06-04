@@ -1,5 +1,21 @@
 @import url(./CSS/admin.css);
 @import url(./CSS/header.css);
+@import url(./CSS/hero.css);
+
+:root {
+  --black: #000c1f;
+  --orange: #fe6800;
+  --blue: #187df1;
+  --white: #f7fafd;
+  --grey: #7c7b89;
+  --white-500: rgba(234, 248, 255, 0.6);
+
+  --font-family: "Inter", sans-serif;
+  --second-family: "Montserrat", sans-serif;
+  --third-family: "SF Pro Text", sans-serif;
+  --font3: "Oswald", sans-serif;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -33,7 +49,7 @@ img {
 
 .container {
   min-width: 320px;
-  max-width: 1240px;
+  max-width: 1080px;
   padding-left: 100px;
   padding-right: 100px;
   margin: 0 auto;
