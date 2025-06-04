@@ -17,14 +17,40 @@
     <header class="header">
       <div class="header_wrapper container">
         <img src="./src/image/header/header-logo.png" alt="logo" />
-        <div>
-          <div class="heade_nav-wrapper">
+        <div class="header_nav-container">
+          <div class="header_nav-wrapper">
             <ul class="header_contact-list">
-              <li class="header_list-contact">
-                <a href="#">1010 N 20th avenue Unit G Hollywood, FL 33020</a>
+              <li class="header_contact-item">
+                <div class="header_icon-wrapper">
+                  <svg class="header_icon">
+                    <use href="./src/image/sprite.svg#icon-location"></use>
+                  </svg>
+                </div>
+                <a
+                  class="header_link-contact"
+                  href="https://maps.google.com/?q=1010+N+20th+avenue+Unit+G+Hollywood,+FL+33020"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  1010 N 20th avenue Unit G Hollywood, FL 33020
+                </a>
               </li>
-              <li><a href="#">+1 305 922 40 50</a></li>
+              <li class="header_contact-item">
+                <div class="header_icon-wrapper">
+                  <svg class="header_icon">
+                    <use href="./src/image/sprite.svg#icon-phone-light"></use>
+                  </svg>
+                </div>
+                <a class="header_link-contact" href="tel:+13059224050">
+                  +1 305 922 40 50
+                </a>
+              </li>
             </ul>
+            <select class="header_select" id="language-select">
+              <option value="EN">EN</option>
+              <option value="ES">ES</option>
+              <option value="RU">RU</option>
+            </select>
           </div>
           <nav>
             <ul class="header_nav-list">
