@@ -2,6 +2,7 @@
 @import url(./CSS/header.css);
 @import url(./CSS/hero.css);
 @import url(./CSS/about.css);
+@import url(./CSS/map.css);
 
 :root {
   --black: #000c1f;
