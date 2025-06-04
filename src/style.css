@@ -4,6 +4,8 @@
 @import url(./CSS/about.css);
 @import url(./CSS/map.css);
 @import url(./CSS/choose.css);
+@import url(./CSS/car.css);
+@import url(./CSS/contact.css);
 
 :root {
   --black: #000c1f;
