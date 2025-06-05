@@ -12,6 +12,7 @@
   --black: #000c1f;
   --orange: #fe6800;
   --blue: #187df1;
+  --blue-hover: #4795ee;
   --white: #f7fafd;
   --grey: #7c7b89;
   --white-500: rgba(234, 248, 255, 0.6);
@@ -28,6 +29,7 @@ html {
 
 body {
   margin: 0;
+  font-family: var(--font-family);
 }
 a {
   text-decoration: none;

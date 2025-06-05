@@ -3,7 +3,7 @@
   height: 20px;
   width: 100%;
   height: 133px;
-  z-index: 1;
+  z-index: 2;
 }
 .header_wrapper {
   position: relative;
@@ -74,7 +74,6 @@
   align-items: center;
   gap: 8px;
   height: 34px;
-  font-family: var(--font-family);
   font-size: 14px;
   color: var(--black);
   transition: all 300ms ease;
@@ -98,7 +97,6 @@
 }
 .header_nav-link {
   display: inline-block;
-  font-family: var(--font-family);
   font-weight: 500;
   font-size: 20px;
   color: var(--white);
