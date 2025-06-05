@@ -16,7 +16,70 @@
   <body>
     <header class="header">
       <div class="header_wrapper container">
-        <img src="./src/image/header/header-logo.png" alt="logo" />
+        <div class="header_logo">
+          <img
+            class="header_logo"
+            src="./src/image/header/header-logo.png"
+            alt="logo"
+          />
+        </div>
+
+        <div class="header_mob-menu">
+          <div class="header_mob-wpapper">
+            <div class="header_mob-phone" id="phone-toggle">
+              <svg class="header_icon">
+                <use href="./src/image/sprite.svg#icon-phone"></use>
+              </svg>
+              <svg class="header_icon icon_arrow">
+                <use href="./src/image/sprite.svg#icon-arrow"></use>
+              </svg>
+            </div>
+            <div class="custom-select-wrapper">
+              <select class="header_select" id="language-select">
+                <option value="EN">ENG</option>
+                <option value="ES">ESP</option>
+                <option value="RU">RUS</option>
+              </select>
+              <svg class="header_icon icon_arrow">
+                <use href="./src/image/sprite.svg#icon-arrow"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="header_mobile-navigation-wrapper">
+            <svg class="header_icon header_burger">
+              <use href="./src/image/sprite.svg#icon-burger"></use>
+            </svg>
+
+            <div class="mobile_modal-menu">
+              <svg class="icon_close">
+                <use href="./src/image/sprite.svg#icon-close"></use>
+              </svg>
+              <div class="mobile_location-wrapper">
+                <a
+                  class="mobile_link-location"
+                  href="https://maps.google.com/?q=1010+N+20th+avenue+Unit+G+Hollywood,+FL+33020"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div>
+                    <svg class="location_icon">
+                      <use href="./src/image/sprite.svg#icon-location"></use>
+                    </svg>
+                  </div>
+
+                  1010 N 20th avenue Unit G Hollywood, FL 33020
+                </a>
+              </div>
+              <ul class="mobile_nav-list">
+                <li><a href="">Home</a></li>
+                <li><a href="">About us</a></li>
+                <li><a href="">Car for sale</a></li>
+                <li><a href="">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
         <div class="header_nav-container">
           <div class="header_nav-wrapper">
             <ul class="header_contact-list">
@@ -47,9 +110,9 @@
               </li>
             </ul>
             <select class="header_select" id="language-select">
-              <option value="EN">EN</option>
-              <option value="ES">ES</option>
-              <option value="RU">RU</option>
+              <option value="EN">ENG</option>
+              <option value="ES">ESP</option>
+              <option value="RU">RUS</option>
             </select>
           </div>
           <nav>
@@ -65,7 +128,7 @@
     </header>
 
     <section class="hero container">
-      <div>
+      <div class="hero_wrapper">
         <h1 class="hero_title">Every car just $3000</h1>
         <p class="hero_text">
           Inspected, ready-to-drive, and backed by our buy-back program.
@@ -73,10 +136,10 @@
         <p class="hero_text">Own it, drive it, return it — it’s that simple.</p>
         <button class="hero_btn">Buy now</button>
       </div>
-      <div><img src="./src/image/hero/hero-img.png" alt="spead" /></div>
+      <img class="hero_img" src="./src/image/hero/hero-img.png" alt="spead" />
     </section>
 
-    <section class="about container">
+    <!-- <section class="about container">
       <h2 class="about_title">About us</h2>
       <div class="about_wrapper">
         <div class="about_wrapper-text">
@@ -320,7 +383,7 @@
         </div>
         <p class="footer_text">2025. Save on cars</p>
       </div>
-    </footer>
+    </footer> -->
 
     <script type="module" src="/src/main.js"></script>
   </body>

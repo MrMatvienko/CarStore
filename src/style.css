@@ -27,6 +27,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -56,11 +57,26 @@ ul {
 img {
   display: block;
 }
-
 .container {
-  min-width: 320px;
+  min-width: 288px;
   max-width: 1080px;
-  padding-left: 100px;
-  padding-right: 100px;
   margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
 }
+@media screen and (min-width: 746px) {
+  .container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+/* .show {
+  display: flex !important;
+} */

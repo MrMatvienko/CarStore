@@ -4,10 +4,11 @@
   align-items: center;
   gap: 43px;
   background: var(--black);
-  width: 1280px;
-  height: 509px;
-  padding-top: 196px;
-  padding-bottom: 63px;
+  max-width: 1280px;
+  width: 100%;
+  height: 376px;
+  padding-top: 259px;
+  padding-bottom: 128px;
   overflow: hidden;
   z-index: 1;
 }
@@ -35,6 +36,9 @@
   background: rgba(24, 125, 241);
   filter: blur(200px);
   z-index: -1;
+}
+.hero_img {
+  display: none;
 }
 
 .hero_title {
@@ -66,4 +70,25 @@
 .hero_btn:hover {
   background-color: var(--blue-hover);
   scale: 1.1;
+}
+@media screen and (min-width: 746px) {
+  .hero {
+    height: 256px;
+    padding-top: 307px;
+    padding-bottom: 157px;
+  }
+  .hero_wrapper {
+    max-width: 528px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero {
+    height: 509px;
+    padding-top: 196px;
+    padding-bottom: 63px;
+  }
+  .hero_img {
+    display: flex;
+  }
 }
