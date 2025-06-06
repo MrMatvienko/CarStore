@@ -1,25 +1,33 @@
 .choose {
-  background: #020d18;
-  padding-top: 48px;
-  padding-bottom: 80px;
+  background: var(--black-bgrnd);
+  padding-top: 32px;
+  padding-bottom: 56px;
 }
 
 .choose_title {
   font-family: var(--second-family);
   font-weight: 600;
-  font-size: 32px;
+  font-size: 28px;
   color: var(--white);
-  margin-bottom: 48px;
+  margin-bottom: 39px;
 }
 .choose_list {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 60px;
+  gap: 32px;
 }
 .choose_list-item {
   width: 212px;
   height: 144px;
+}
+.choose_list-item:nth-child(odd) {
+  align-self: flex-start;
+}
+
+.choose_list-item:nth-child(even) {
+  align-self: flex-end;
 }
 .choose_svg-container {
   display: flex;
@@ -46,5 +54,36 @@
 .choose_icon {
   width: 48px;
   height: 48px;
+  stroke: var(--orange);
   fill: var(--orange);
+}
+@media screen and (min-width: 746px) {
+  .choose {
+    padding-top: 48px;
+    padding-bottom: 80px;
+  }
+  .choose_title {
+    font-size: 32px;
+    margin-bottom: 48px;
+  }
+  .choose_list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: unset;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+  }
+  .choose_list-item:nth-child(odd) {
+    align-self: unset;
+  }
+
+  .choose_list-item:nth-child(even) {
+    align-self: unset;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .choose_list {
+    gap: 60px;
+  }
 }
