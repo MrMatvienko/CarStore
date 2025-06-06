@@ -1,6 +1,7 @@
 .about {
   height: 949px;
   padding: 80px 0;
+  overflow: hidden;
 }
 .about_title {
   font-family: var(--second-family);
@@ -10,12 +11,24 @@
   margin-bottom: 32px;
 }
 .about_wrapper {
+  position: relative;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 32px;
+}
+.about_wrapper ::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: -16px;
+  width: 766px;
+  height: 100%;
+  max-height: 342px;
+  border: 10px solid rgba(24, 125, 241, 0.1);
+  z-index: 3;
 }
 .about_wrapper-text {
   width: 100%;
@@ -30,6 +43,7 @@
   display: block;
 }
 .about_wrapper-text p {
+  max-width: 568px;
   width: 100%;
   font-size: 16px;
   line-height: 1.5;
@@ -41,6 +55,9 @@
   font-weight: 600;
 }
 @media screen and (min-width: 746px) {
+  .about_wrapper ::before {
+    display: none;
+  }
   .about_second-container {
     max-width: 960px;
     margin: 0 auto;
