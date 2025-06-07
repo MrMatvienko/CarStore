@@ -17,11 +17,13 @@
     <header class="header">
       <div class="header_wrapper container">
         <div class="header_logo">
-          <img
-            class="header_logo"
-            src="./src/image/header/header-logo.png"
-            alt="logo"
-          />
+          <a href="/">
+            <img
+              class="header_logo"
+              src="./src/image/header/header-logo.png"
+              alt="logo"
+            />
+          </a>
         </div>
 
         <div class="header_mob-menu">
@@ -74,10 +76,10 @@
                 </a>
               </div>
               <ul class="mobile_nav-list">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Car for sale</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="#about">About us</a></li>
+                <li><a href="#car-list">Car for sale</a></li>
+                <li><a href="#contact">Contact</a></li>
               </ul>
             </div>
           </div>
@@ -127,10 +129,12 @@
           </div>
           <nav>
             <ul class="header_nav-list">
-              <li><a class="header_nav-link" href="#">Home</a></li>
-              <li><a class="header_nav-link" href="#">About us</a></li>
-              <li><a class="header_nav-link" href="#">Car for sale</a></li>
-              <li><a class="header_nav-link" href="#">Contact</a></li>
+              <li><a class="header_nav-link" href="/">Home</a></li>
+              <li><a class="header_nav-link" href="#about">About us</a></li>
+              <li>
+                <a class="header_nav-link" href="#car-list">Car for sale</a>
+              </li>
+              <li><a class="header_nav-link" href="#contact">Contact</a></li>
             </ul>
           </nav>
         </div>
@@ -149,7 +153,7 @@
       <img class="hero_img" src="./src/image/hero/hero-img.png" alt="spead" />
     </section>
 
-    <section class="about container">
+    <section class="about container" id="about">
       <div class="about_second-container">
         <h2 class="about_title">About us</h2>
         <div class="about_wrapper">
@@ -240,9 +244,11 @@
       </div>
     </section>
 
-    <section class="car container"></section>
+    <section class="car container" id="car-list">
+      <h2>Car list to soon...</h2>
+    </section>
 
-    <section class="contact">
+    <section class="contact" id="contact">
       <div class="container">
         <h2 class="contact_title">Contact us</h2>
         <div class="contact_wrapper">
@@ -345,11 +351,14 @@
         <div class="footer_wrapper">
           <div class="footer_wrapper-second">
             <div class="footer_logo-container">
-              <img
-                class="footer_logo"
-                src="./src/image/header/header-logo.png"
-                alt="logo"
-              />
+              <a href="/">
+                <img
+                  class="footer_logo"
+                  src="./src/image/header/header-logo.png"
+                  alt="logo"
+                />
+              </a>
+
               <ul class="social_list">
                 <li class="social_list-item">
                   <a href="#">
@@ -377,10 +386,16 @@
 
             <nav>
               <ul class="footer_nav-list">
-                <li><a class="footer_text-weight" href="#">Home</a></li>
-                <li><a class="footer_text-weight" href="#">About us</a></li>
                 <li>
-                  <a class="footer_text-weight" href="#">Car for sale</a>
+                  <a class="footer_text-weight" href="/">Home</a>
+                </li>
+                <li>
+                  <a class="footer_text-weight" href="#about">About us</a>
+                </li>
+                <li>
+                  <a class="footer_text-weight" href="#car-list"
+                    >Car for sale</a
+                  >
                 </li>
               </ul>
             </nav>
