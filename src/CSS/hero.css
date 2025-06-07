@@ -1,4 +1,6 @@
 .hero {
+  min-width: 320px;
+  max-width: 1910px;
   position: relative;
   display: flex;
   align-items: center;
@@ -7,6 +9,8 @@
   height: 763px;
   padding-top: 259px;
   padding-bottom: 128px;
+  padding-left: 16px;
+  padding-right: 16px;
   overflow: hidden;
   z-index: 1;
 }
@@ -74,6 +78,9 @@
     height: 720px;
     padding-top: 307px;
     padding-bottom: 157px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: 0 auto;
   }
   .hero_wrapper {
     max-width: 528px;
@@ -82,11 +89,22 @@
 }
 @media screen and (min-width: 1280px) {
   .hero {
+    padding-left: 100px;
+    padding-right: 100px;
     height: 768px;
     padding-top: 196px;
     padding-bottom: 63px;
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
   }
   .hero_img {
     display: flex;
+  }
+}
+@media screen and (min-width: 1281px) {
+  .hero {
+    padding-left: 250px;
+    padding-right: 250px;
   }
 }

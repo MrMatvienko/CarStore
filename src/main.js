@@ -1,24 +1,18 @@
-document
-  .getElementById("language-select")
-  .addEventListener("change", function () {
-    const lang = this.value;
-    if (lang === "EN") {
-      window.location.href = "/CarStore/index.html";
-    } else if (lang === "ES") {
-      window.location.href = "/CarStore/es/index.html";
-    } else if (lang === "RU") {
-      window.location.href = "/CarStore/ru/index.html";
-    }
-  });
-const selectWrapper = document.querySelector(".custom-select-wrapper");
-const select = document.getElementById("language-select");
+const selectBtn = document.querySelector(".arrow_select");
+const selectList = document.querySelector(".header_select-list");
+const selectContainer = document.querySelector(".header_select");
 
-select.addEventListener("click", () => {
-  selectWrapper.classList.toggle("open");
-});
+let isOpen = false;
 
-select.addEventListener("blur", () => {
-  selectWrapper.classList.remove("open");
+selectBtn.addEventListener("click", () => {
+  if (isOpen) {
+    selectContainer.style.height = "24px";
+    selectContainer.style.background = "transparent";
+  } else {
+    selectContainer.style.height = "74px";
+    selectContainer.style.background = "var(--white-500)";
+  }
+  isOpen = !isOpen;
 });
 
 /*-------burger-------*/
