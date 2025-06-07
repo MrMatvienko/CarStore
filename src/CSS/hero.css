@@ -102,7 +102,7 @@
     display: flex;
   }
 }
-@media screen and (min-width: 1281px) {
+@media screen and (min-width: 1440px) {
   .hero {
     padding-left: 250px;
     padding-right: 250px;

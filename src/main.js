@@ -1,18 +1,24 @@
-const selectBtn = document.querySelector(".arrow_select");
-const selectList = document.querySelector(".header_select-list");
-const selectContainer = document.querySelector(".header_select");
+const arrowSelects = document.querySelectorAll(".arrow_select");
+const selectContainers = document.querySelectorAll(".header_select");
+const selectLists = document.querySelectorAll(".header_select-list");
 
-let isOpen = false;
+arrowSelects.forEach((btn, index) => {
+  let isOpen = false;
 
-selectBtn.addEventListener("click", () => {
-  if (isOpen) {
-    selectContainer.style.height = "24px";
-    selectContainer.style.background = "transparent";
-  } else {
-    selectContainer.style.height = "74px";
-    selectContainer.style.background = "var(--white-500)";
-  }
-  isOpen = !isOpen;
+  btn.addEventListener("click", () => {
+    const container = selectContainers[index];
+    const list = selectLists[index];
+
+    if (isOpen) {
+      container.style.height = "24px";
+      container.style.background = "transparent";
+    } else {
+      container.style.height = "74px";
+      container.style.background = "var(--white-500)";
+    }
+
+    isOpen = !isOpen;
+  });
 });
 
 /*-------burger-------*/
