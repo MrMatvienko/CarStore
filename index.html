@@ -11,8 +11,8 @@
       rel="stylesheet"
     />
     <title>CarStore</title>
-    <script type="module" crossorigin src="/CarStore/assets/main-CQxZPmBu.js"></script>
-    <link rel="stylesheet" crossorigin href="/CarStore/assets/style-Pxa_-n3G.css">
+    <script type="module" crossorigin src="/CarStore/assets/main-BeyZ2oGF.js"></script>
+    <link rel="stylesheet" crossorigin href="/CarStore/assets/style-DhJViscL.css">
   </head>
   <body>
     <header class="header">
@@ -35,16 +35,16 @@
                 <use href="/CarStore/assets/sprite-zTg94yhH.svg#icon-arrow"></use>
               </svg>
             </div>
-            <div class="custom-select-wrapper">
+            <!-- <div class="custom-select-wrapper">
               <select class="header_select" id="language-select">
                 <option value="EN">ENG</option>
                 <option value="ES">ESP</option>
                 <option value="RU">RUS</option>
               </select>
               <svg class="header_icon icon_arrow">
-                <use href="/CarStore/assets/sprite-zTg94yhH.svg#icon-arrow"></use>
+                <use href="./src/image/sprite.svg#icon-arrow"></use>
               </svg>
-            </div>
+            </div> -->
           </div>
           <div class="header_mobile-navigation-wrapper">
             <svg class="header_icon header_burger">
@@ -110,11 +110,18 @@
                 </a>
               </li>
             </ul>
-            <select class="header_select" id="language-select">
-              <option value="EN">ENG</option>
-              <option value="ES">ESP</option>
-              <option value="RU">RUS</option>
-            </select>
+            <div class="header_select">
+              <ul class="header_select-list">
+                <li>ENG</li>
+                <li><a href="./es/index.html">ESP</a></li>
+                <li><a href="./ru/index.html">RUS</a></li>
+              </ul>
+              <div>
+                <svg class="header_icon arrow_select">
+                  <use href="/CarStore/assets/sprite-zTg94yhH.svg#icon-arrow"></use>
+                </svg>
+              </div>
+            </div>
           </div>
           <nav>
             <ul class="header_nav-list">
@@ -128,7 +135,7 @@
       </div>
     </header>
 
-    <section class="hero container">
+    <section class="hero">
       <div class="hero_wrapper">
         <h1 class="hero_title">Every car just $3000</h1>
         <p class="hero_text">
@@ -280,8 +287,10 @@
 
               <div>
                 <h3 class="contact_item-title">Email</h3>
-                <a class="contact_list-link" href="mailto:info@example.com"
-                  >info@example.com</a
+                <a
+                  class="contact_list-link"
+                  href="mailto:saveoncars.fl@gmail.com"
+                  >saveoncars.fl@gmail.com</a
                 >
               </div>
             </li>
@@ -385,8 +394,10 @@
                   <a class="footer_contact-text" href="">+1 305 922 40 50</a>
                 </li>
                 <li>
-                  <a class="footer_contact-text" href=""
-                    >saveoncars@gmail.com</a
+                  <a
+                    class="footer_contact-text"
+                    href="mailto:saveoncars.fl@gmail.com"
+                    >saveoncars.fl@gmail.com</a
                   >
                 </li>
               </ul>
