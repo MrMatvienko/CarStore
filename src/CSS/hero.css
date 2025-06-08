@@ -1,6 +1,6 @@
 .hero {
   min-width: 320px;
-  max-width: 1910px;
+  width: 100%;
   position: relative;
   display: flex;
   align-items: center;
@@ -95,16 +95,9 @@
     padding-top: 196px;
     padding-bottom: 63px;
     display: flex;
-    justify-content: space-between;
-    gap: 80px;
+    justify-content: center;
   }
   .hero_img {
     display: flex;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .hero {
-    padding-left: 250px;
-    padding-right: 250px;
   }
 }
