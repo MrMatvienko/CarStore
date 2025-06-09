@@ -1,3 +1,5 @@
+document.addEventListener("DOMContentLoaded", () => {});
+
 const arrowSelects = document.querySelectorAll(".arrow_select");
 const selectContainers = document.querySelectorAll(".header_select");
 const selectLists = document.querySelectorAll(".header_select-list");
@@ -45,4 +47,11 @@ burgerBtn.addEventListener("click", () => {
 });
 closeBtn.addEventListener("click", () => {
   menu.classList.remove("show");
+});
+const menuLinks = menu.querySelectorAll("a");
+
+menuLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    menu.classList.remove("show");
+  });
 });

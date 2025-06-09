@@ -69,6 +69,7 @@
 .header_burger {
   width: 24px;
   height: 24px;
+  stroke: var(--black);
 }
 .header_mobile-navigation-wrapper {
   position: relative;
