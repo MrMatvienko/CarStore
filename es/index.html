@@ -328,12 +328,48 @@
           <div class="contact_form-wrapper">
             <h3 class="contact_form-title">Send message</h3>
             <form class="contact_form">
-              <input type="text" placeholder="First Name" />
-              <input type="text" placeholder="Last Name" />
-              <input type="email" placeholder="Email" />
-              <input type="tel" placeholder="Phone" />
-              <input type="text" placeholder="Comments" />
-              <button class="contact_form-btn">Send</button>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="First Name"
+                required
+                maxlength="15"
+              />
+              <input
+                type="text"
+                id="last-name"
+                name="last-name"
+                placeholder="Last Name"
+                required
+                maxlength="25"
+              />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email"
+                pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+                title="Invalid email address"
+                required
+              />
+              <input
+                type="tel"
+                id="tell"
+                name="tell"
+                placeholder="Phone"
+                pattern="8[12][0-9] [0-9][0-9][0-9] [0-9][0-9][0-9]"
+                maxlength="12"
+                required
+              />
+              <input
+                type="text"
+                id="comments"
+                name="comments"
+                placeholder="Comments"
+                maxlength="100"
+              />
+              <button type="submit" class="contact_form-btn">Send</button>
             </form>
           </div>
         </div>

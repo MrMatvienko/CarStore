@@ -135,6 +135,10 @@
   background: var(--orange-hover);
   scale: 1.1;
 }
+.contact_form-btn.disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
 
 @media screen and (min-width: 746px) {
   .contact {

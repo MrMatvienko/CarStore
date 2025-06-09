@@ -1,7 +1,9 @@
+import { formSend } from "./JS/form";
 import { burgerMenu } from "./JS/modal-menu";
 
 document.addEventListener("DOMContentLoaded", () => {
   burgerMenu();
+  formSend();
 });
 
 const arrowSelects = document.querySelectorAll(".arrow_select");

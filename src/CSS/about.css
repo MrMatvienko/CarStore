@@ -66,6 +66,7 @@
   }
   .about_wrapper {
     height: auto;
+    max-width: 858px;
     width: 100%;
     position: relative;
     display: flex;
