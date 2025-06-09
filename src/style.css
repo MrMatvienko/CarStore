@@ -84,6 +84,6 @@ img {
   }
 }
 
-/* .show {
-  display: flex !important;
-} */
+.map {
+  width: 100%;
+}

@@ -1,12 +1,461 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../src/style.css" />
+    <title>CarStore</title>
   </head>
   <body>
-    <h1>UA</h1>
+    <header class="header">
+      <div class="header_wrapper container">
+        <div class="header_logo">
+          <a href="/">
+            <img
+              class="header_logo"
+              src="../src/image/header/header-logo.png"
+              alt="logo"
+            />
+          </a>
+        </div>
+
+        <div class="header_mob-menu">
+          <div class="header_mob-wpapper">
+            <div class="header_mob-phone">
+              <a href="tel:+13059224050"
+                ><svg class="header_icon icon_mode">
+                  <use href="../src/image/sprite.svg#icon-phone"></use></svg
+              ></a>
+            </div>
+
+            <div class="header_select">
+              <ul class="header_select-list">
+                <li>ESP</li>
+                <li><a href="./index.html">ENG</a></li>
+                <li><a href="./ru/index.html">RUS</a></li>
+              </ul>
+              <div>
+                <svg class="header_icon arrow_select">
+                  <use href="../src/image/sprite.svg#icon-arrow"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="header_mobile-navigation-wrapper">
+            <svg class="header_icon header_burger">
+              <use href="../src/image/sprite.svg#icon-burger"></use>
+            </svg>
+
+            <div class="mobile_modal-menu">
+              <svg class="icon_close">
+                <use href="../src/image/sprite.svg#icon-close"></use>
+              </svg>
+              <div class="mobile_location-wrapper">
+                <a
+                  class="mobile_link-location"
+                  href="https://maps.google.com/?q=1010+N+20th+avenue+Unit+G+Hollywood,+FL+33020"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div>
+                    <svg class="location_icon">
+                      <use href="../src/image/sprite.svg#icon-location"></use>
+                    </svg>
+                  </div>
+
+                  1010 N 20th avenue Unit G Hollywood, FL 33020
+                </a>
+              </div>
+              <ul class="mobile_nav-list">
+                <li><a href="/">Home</a></li>
+                <li><a href="#about">About us</a></li>
+                <li><a href="#car-list">Car for sale</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="header_nav-container">
+          <div class="header_nav-wrapper">
+            <ul class="header_contact-list">
+              <li class="header_contact-item">
+                <a
+                  class="header_link-contact"
+                  href="https://maps.google.com/?q=1010+N+20th+avenue+Unit+G+Hollywood,+FL+33020"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div class="header_icon-wrapper">
+                    <svg class="header_icon icon_mode">
+                      <use href="../src/image/sprite.svg#icon-location"></use>
+                    </svg>
+                  </div>
+                  1010 N 20th avenue Unit G Hollywood, FL 33020
+                </a>
+              </li>
+              <li class="header_contact-item">
+                <a class="header_link-contact" href="tel:+13059224050">
+                  <div class="header_icon-wrapper">
+                    <svg class="header_icon icon_mode">
+                      <use href="../src/image/sprite.svg#icon-phone"></use>
+                    </svg>
+                  </div>
+                  +1 305 922 40 50
+                </a>
+              </li>
+            </ul>
+            <div class="header_select">
+              <ul class="header_select-list">
+                <li>ESP</li>
+                <li><a href="../index.html">ENG</a></li>
+                <li><a href="./ru/index.html">RUS</a></li>
+              </ul>
+              <div>
+                <svg class="header_icon arrow_select">
+                  <use href="../src/image/sprite.svg#icon-arrow"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <nav>
+            <ul class="header_nav-list">
+              <li><a class="header_nav-link" href="/">Home</a></li>
+              <li><a class="header_nav-link" href="#about">About us</a></li>
+              <li>
+                <a class="header_nav-link" href="#car-list">Car for sale</a>
+              </li>
+              <li><a class="header_nav-link" href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero_back">
+        <img src="../src/image/header/header-back-over.png" alt="orange-line" />
+      </div>
+      <div class="hero_wrapper">
+        <h1 class="hero_title">Every car just $3000</h1>
+        <div class="hero_text-block">
+          <p class="hero_text">
+            Inspected, ready-to-drive, and backed by our buy-back program.
+          </p>
+          <p class="hero_text">
+            Own it, drive it, return it — it’s that simple.
+          </p>
+        </div>
+
+        <a class="hero_btn" href="#car-list">Buy now</a>
+      </div>
+      <img class="hero_img" src="../src/image/hero/hero-img.png" alt="spead" />
+    </section>
+
+    <section class="about container" id="about">
+      <div class="about_second-container">
+        <h2 class="about_title">About us</h2>
+        <div class="about_wrapper">
+          <div class="about_wrapper-text">
+            <p>
+              At SaveOnCars, we believe car ownership should be simple,
+              flexible, and affordable.
+            </p>
+            <p>
+              Based in Florida, we offer quality pre-owned vehicles — each for
+              just $3000. No hidden fees, no surprises. Just real cars at real
+              prices.
+            </p>
+            <p>
+              Every vehicle goes through a full inspection, so you can drive
+              with confidence from day one. And when you’re ready to move on,
+              we’ve got your back — literally.
+            </p>
+            <p>
+              Thanks to our buy-back program, you can sell your car back to us
+              when you no longer need it. That’s flexibility you won’t find
+              elsewhere.
+            </p>
+            <p>
+              We’re here to give you honest deals, great service, and complete
+              freedom of choice — all for just $3000.
+            </p>
+          </div>
+          <img
+            class="about_img"
+            src="../src/image/about/about-img.jpg"
+            alt="car"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="choose">
+      <div class="container">
+        <h2 class="choose_title">Why Choose Us</h2>
+        <ul class="choose_list">
+          <li class="choose_list-item">
+            <div class="choose_svg-container">
+              <svg class="choose_icon">
+                <use href="../src/image/sprite.svg#icon-dolar"></use>
+              </svg>
+              <h3 class="choose_item-title">Fixed Price — $3000</h3>
+            </div>
+            <p class="choose_item-text">
+              Every vehicle is just $3000 — affordable, simple, and fair.
+            </p>
+          </li>
+          <li class="choose_list-item">
+            <div class="choose_svg-container">
+              <svg class="choose_icon">
+                <use href="../src/image/sprite.svg#icon-list"></use>
+              </svg>
+              <h3 class="choose_item-title">Clean Title</h3>
+            </div>
+            <p class="choose_item-text">
+              All our cars come with a clean title — no salvage, no hidden
+              issues.
+            </p>
+          </li>
+          <li class="choose_list-item">
+            <div class="choose_svg-container">
+              <svg class="choose_icon">
+                <use href="../src/image/sprite.svg#icon-buy-back"></use>
+              </svg>
+              <h3 class="choose_item-title">Buy-Back Guarantee</h3>
+            </div>
+            <p class="choose_item-text">
+              Drive the car, then sell it back to us when you’re done.
+            </p>
+          </li>
+          <li class="choose_list-item">
+            <div class="choose_svg-container">
+              <svg class="choose_icon">
+                <use href="../src/image/sprite.svg#icon-auto"></use>
+              </svg>
+              <h3 class="choose_item-title">Fully Inspected Cars</h3>
+            </div>
+            <p class="choose_item-text">
+              Each vehicle is checked and ready to go.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="car container" id="car-list">
+      <h2>Car list to soon...</h2>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2 class="contact_title">Contact us</h2>
+        <div class="contact_wrapper">
+          <ul class="contact_list">
+            <li>
+              <div class="contact_icon-wraper">
+                <svg class="contact-icon">
+                  <use href="../src/image/sprite.svg#icon-location"></use>
+                </svg>
+              </div>
+
+              <div>
+                <h3 class="contact_item-title">Address</h3>
+                <a
+                  class="contact_list-link"
+                  href="https://maps.google.com/?q=1010+N+20th+avenue+Unit+G+Hollywood,+FL+33020"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  1010 N 20th avenue Unit G Hollywood, FL 33020
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="contact_icon-wraper">
+                <svg class="contact-icon">
+                  <use href="../src/image/sprite.svg#icon-phone"></use>
+                </svg>
+              </div>
+
+              <div>
+                <h3 class="contact_item-title">Phone</h3>
+                <a class="contact_list-link" href="tel:+13059224050"
+                  >+1 305 922 40 50</a
+                >
+              </div>
+            </li>
+            <li>
+              <div class="contact_icon-wraper">
+                <svg class="contact-icon">
+                  <use href="../src/image/sprite.svg#icon-message"></use>
+                </svg>
+              </div>
+
+              <div>
+                <h3 class="contact_item-title">Email</h3>
+                <a
+                  class="contact_list-link"
+                  href="mailto:saveoncars.fl@gmail.com"
+                  >saveoncars.fl@gmail.com</a
+                >
+              </div>
+            </li>
+            <li>
+              <div class="contact_icon-wraper">
+                <svg class="contact-icon">
+                  <use href="../src/image/sprite.svg#icon-clock"></use>
+                </svg>
+              </div>
+
+              <div>
+                <h3 class="contact_item-title">Working Hours</h3>
+                <span class="contact_span-working">Monday - Friday</span>
+                <p class="contact_working-time">9:30 am to 5:30 pm</p>
+                <span class="contact_span-working">Saturday</span>
+                <p class="contact_working-time">11:00 am to 2:00 pm</p>
+                <p class="contact_working-closed">Sunday - Closed</p>
+              </div>
+            </li>
+          </ul>
+          <div class="contact_form-wrapper">
+            <h3 class="contact_form-title">Send message</h3>
+            <form class="contact_form">
+              <input type="text" placeholder="First Name" />
+              <input type="text" placeholder="Last Name" />
+              <input type="email" placeholder="Email" />
+              <input type="tel" placeholder="Phone" />
+              <input type="text" placeholder="Comments" />
+              <button class="contact_form-btn">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="map">
+      <iframe
+        class="map"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3585.4160827515825!2d-80.15012152402059!3d26.019938697885163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9aba686291b45%3A0xb1d33a0c85679151!2zMTAxMCBOIDIwdGggQXZlLCBIb2xseXdvb2QsIEZMIDMzMDIwLCDQodC_0L7Qu9GD0YfQtdC90ZYg0KjRgtCw0YLQuCDQkNC80LXRgNC40LrQuA!5e0!3m2!1suk!2sua!4v1749044638794!5m2!1suk!2sua"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer_wrapper">
+          <div class="footer_wrapper-second">
+            <div class="footer_logo-container">
+              <a href="/">
+                <img
+                  class="footer_logo"
+                  src="../src/image/header/header-logo.png"
+                  alt="logo"
+                />
+              </a>
+
+              <ul class="social_list">
+                <li class="social_list-item">
+                  <a href="#">
+                    <svg class="social_icon">
+                      <use href="../src/image/sprite.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social_list-item">
+                  <a href="#">
+                    <svg class="social_icon">
+                      <use href="../src/image/sprite.svg#icon-whatsapp"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social_list-item">
+                  <a href="#">
+                    <svg class="social_icon">
+                      <use href="../src/image/sprite.svg#icon-telegram"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <nav>
+              <ul class="footer_nav-list">
+                <li>
+                  <a class="footer_text-weight" href="/">Home</a>
+                </li>
+                <li>
+                  <a class="footer_text-weight" href="#about">About us</a>
+                </li>
+                <li>
+                  <a class="footer_text-weight" href="#car-list"
+                    >Car for sale</a
+                  >
+                </li>
+              </ul>
+            </nav>
+            <div class="footer_contact-container">
+              <h3 class="footer_text-contact">Contat us</h3>
+              <ul class="footer_contact-list">
+                <li>
+                  <a class="footer_contact-text" href=""
+                    >1010 N 20th avenue Unit G Hollywood, FL 33020</a
+                  >
+                </li>
+                <li>
+                  <a class="footer_contact-text" href="tel:+13059224050"
+                    >+1 305 922 40 50</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="footer_contact-text"
+                    href="mailto:saveoncars.fl@gmail.com"
+                    >saveoncars.fl@gmail.com</a
+                  >
+                </li>
+              </ul>
+              <ul class="social_list-mobile">
+                <li class="social_list-item-">
+                  <a href="#">
+                    <svg class="social_icon">
+                      <use href="../src/image/sprite.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social_list-item">
+                  <a href="#">
+                    <svg class="social_icon">
+                      <use href="../src/image/sprite.svg#icon-whatsapp"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social_list-item">
+                  <a href="#">
+                    <svg class="social_icon">
+                      <use href="../src/image/sprite.svg#icon-telegram"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <p class="footer_text">2025. Save on cars</p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="../src/main.js"></script>
   </body>
 </html>
