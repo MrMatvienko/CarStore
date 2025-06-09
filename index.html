@@ -11,8 +11,8 @@
       rel="stylesheet"
     />
     <title>CarStore</title>
-    <script type="module" crossorigin src="/CarStore/assets/main-BwsFCXzR.js"></script>
-    <link rel="stylesheet" crossorigin href="/CarStore/assets/style-yrDiEQi4.css">
+    <script type="module" crossorigin src="/CarStore/assets/main-cSg4kUXo.js"></script>
+    <link rel="stylesheet" crossorigin href="/CarStore/assets/style-D78ie0kk.css">
   </head>
   <body>
     <header class="header">
@@ -39,8 +39,8 @@
             <div class="header_select">
               <ul class="header_select-list">
                 <li>ENG</li>
-                <li><a href="./es/index.html">ESP</a></li>
-                <li><a href="./ru/index.html">RUS</a></li>
+                <li><a href="/CarStore/es/">ESP</a></li>
+                <li><a href="/CarStore/ru/">RUS</a></li>
               </ul>
               <div>
                 <svg class="header_icon arrow_select">
@@ -329,12 +329,48 @@
           <div class="contact_form-wrapper">
             <h3 class="contact_form-title">Send message</h3>
             <form class="contact_form">
-              <input type="text" placeholder="First Name" />
-              <input type="text" placeholder="Last Name" />
-              <input type="email" placeholder="Email" />
-              <input type="tel" placeholder="Phone" />
-              <input type="text" placeholder="Comments" />
-              <button class="contact_form-btn">Send</button>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="First Name"
+                required
+                maxlength="15"
+              />
+              <input
+                type="text"
+                id="last-name"
+                name="last-name"
+                placeholder="Last Name"
+                required
+                maxlength="25"
+              />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email"
+                pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+                title="Invalid email address"
+                required
+              />
+              <input
+                type="tel"
+                id="tell"
+                name="tell"
+                placeholder="Phone"
+                pattern="8[12][0-9] [0-9][0-9][0-9] [0-9][0-9][0-9]"
+                maxlength="12"
+                required
+              />
+              <input
+                type="text"
+                id="comments"
+                name="comments"
+                placeholder="Comments"
+                maxlength="100"
+              />
+              <button type="submit" class="contact_form-btn">Send</button>
             </form>
           </div>
         </div>
@@ -460,6 +496,17 @@
         </div>
       </div>
     </footer>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "3yC9tSBfO-7Mhrlor",
+        });
+      })();
+    </script>
 
   </body>
 </html>
