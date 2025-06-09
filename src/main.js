@@ -1,4 +1,8 @@
-document.addEventListener("DOMContentLoaded", () => {});
+import { burgerMenu } from "./JS/modal-menu";
+
+document.addEventListener("DOMContentLoaded", () => {
+  burgerMenu();
+});
 
 const arrowSelects = document.querySelectorAll(".arrow_select");
 const selectContainers = document.querySelectorAll(".header_select");
@@ -8,7 +12,7 @@ arrowSelects.forEach((btn, index) => {
   let isOpen = false;
 
   btn.addEventListener("click", (e) => {
-    e.stopPropagation(); // Щоб клік не доходив до document
+    e.stopPropagation();
 
     const container = selectContainers[index];
 
@@ -16,7 +20,6 @@ arrowSelects.forEach((btn, index) => {
       container.style.height = "24px";
       container.style.background = "transparent";
     } else {
-      // Закриваємо всі інші
       selectContainers.forEach((el) => {
         el.style.height = "24px";
         el.style.background = "transparent";
@@ -34,24 +37,5 @@ document.addEventListener("click", () => {
   selectContainers.forEach((container) => {
     container.style.height = "24px";
     container.style.background = "transparent";
-  });
-});
-/*-------burger-------*/
-
-const burgerBtn = document.querySelector(".header_burger");
-const closeBtn = document.querySelector(".icon_close");
-const menu = document.querySelector(".mobile_modal-menu");
-
-burgerBtn.addEventListener("click", () => {
-  menu.classList.add("show");
-});
-closeBtn.addEventListener("click", () => {
-  menu.classList.remove("show");
-});
-const menuLinks = menu.querySelectorAll("a");
-
-menuLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    menu.classList.remove("show");
   });
 });
