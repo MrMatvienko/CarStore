@@ -1,3 +1,4 @@
+import { Notify } from "notiflix";
 export function formSend() {
   const form = document.querySelector(".contact_form");
 
@@ -14,21 +15,16 @@ export function formSend() {
       comments: document.getElementById("comments").value.trim(),
     };
 
-    if (email && !validateEmail(email)) {
-      alert("Please enter a valid email address.");
-      return;
-    }
-
     emailjs
       .send("service_h008j4k", "template_lg67tv1", params)
       .then((resp) => {
         btn.classList.add("disabled");
         btn.disabled = true;
-        alert(`SUCCESS, ${resp.status}`);
+        Notify.success(`Success!`);
         form.reset();
       })
       .catch((error) => {
-        console.log(error);
+        Notify.failure(`Try again,${error}!`);
       })
       .finally(() => {
         btn.classList.remove("disabled");
