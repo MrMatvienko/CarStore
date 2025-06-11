@@ -12,39 +12,40 @@
       <div class="header_wraper">ADMIN PANEL</div>
     </header>
     <section class="form_section-add container">
-      <form class="form__add-car">
-        <span>ADD NEW CAR</span>
-        <div class="form_label-wraper">
-          <label for="id_number">ID</label>
-          <input type="text" name="id_number" id="id_number" />
-        </div>
-        <div class="form_label-wraper">
-          <label for="brand">Brand</label>
-          <input type="text" name="brand" id="brand" />
-        </div>
-        <div class="form_label-wraper">
-          <label for="model">Model</label>
-          <input type="text" name="model" id="model" />
-        </div>
-        <div class="form_label-wraper">
-          <label for="year">Year</label>
-          <input type="text" name="year" id="year" />
-        </div>
-        <div class="form_label-wraper">
-          <label for="volume">Engine volume</label>
-          <input type="text" name="volume" id="volume" />
-        </div>
-        <div class="form_label-wraper">
-          <label for="type">Type car</label>
-          <input type="text" name="type" id="type" />
-        </div>
-        <div class="form_label-wraper">
-          <label for="gearbox">Type of gearbox</label>
-          <input type="text" name="gearbox" id="gearbox" />
-        </div>
-
-        <button class="add_btn">+add</button>
-      </form>
+      <div class="form_wrapper">
+        <form class="form_add-car">
+          <span>ADD NEW CAR</span>
+          <div class="form_label-wraper">
+            <label for="title-car">Title</label>
+            <input type="text" name="title-car" id="title-car" />
+          </div>
+          <div class="form_label-wraper">
+            <label for="price">Price</label>
+            <input type="text" name="price" id="price" />
+          </div>
+          <div class="form_label-wraper">
+            <label for="brand">Brand</label>
+            <input type="text" name="brand" id="brand" />
+          </div>
+          <div class="form_label-wraper">
+            <label for="mileage">Mileage</label>
+            <input type="text" name="mileage" id="mileage" />
+          </div>
+          <div class="form_label-wraper">
+            <label for="year">Year</label>
+            <input type="text" name="year" id="year" />
+          </div>
+          <button class="add_btn">+add</button>
+        </form>
+        <form class="form_delete">
+          <h2>Delete car</h2>
+          <label for="article">Article</label>
+          <input type="number" name="article" id="article" placeholder="001" />
+          <button>Delete</button>
+        </form>
+      </div>
     </section>
+
+    <script type="module" src="../src/JS/adminJs/admin.js"></script>
   </body>
 </html>

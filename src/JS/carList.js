@@ -1,4 +1,45 @@
+import { getAllCars } from "../API/api";
+
 export function carList() {
-  const carWrapperList = document.querySelector(".car_list-wrapper");
-  console.log(carWrapperList);
+  const container = document.querySelector(".car_list-wrapper");
+  function createCarCard(car) {
+    const li = document.createElement("li");
+    li.classList.add("car-card");
+
+    li.innerHTML = `
+    <div class="car_info">
+      <div class="car_item-text">
+        <h3 class="car_info-title">${car.title}</h3>
+        <p class="car_info-price">$${car.price}</p>
+        <div>
+          <div class="car_info-subwrapper">
+            <p class="car_info-text">Release date</p>
+            <p class="car_info-text">${car.year}</p>
+          </div>
+          <div class="car_info-subwrapper">
+            <p class="car_info-text">Mileage</p>
+            <p class="car_info-text">${car.mileage} mi</p>
+          </div>
+        </div>
+      </div>
+      <button class="car_list-btn">Get it!</button>
+      <p class="car_info-article">#${car.article}<p/>
+    </div>
+  `;
+
+    return li;
+  }
+  async function renderCars() {
+    try {
+      const cars = await getAllCars();
+      cars.forEach((car) => {
+        const item = createCarCard(car);
+        container.appendChild(item);
+      });
+      console.log(cars);
+    } catch (error) {
+      container.innerHTML = "<li>Не вдалося завантажити список авто.</li>";
+    }
+  }
+  renderCars();
 }

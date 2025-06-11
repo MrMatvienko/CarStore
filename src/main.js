@@ -1,6 +1,6 @@
-import { carList } from "./JS/carList";
 import { formSend } from "./JS/form";
 import { burgerMenu } from "./JS/modal-menu";
+import { carList } from "./JS/carList";
 
 document.addEventListener("DOMContentLoaded", () => {
   burgerMenu();
@@ -10,8 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const arrowSelects = document.querySelectorAll(".arrow_select");
 const selectContainers = document.querySelectorAll(".header_select");
-const selectLists = document.querySelectorAll(".header_select-list");
-
 arrowSelects.forEach((btn, index) => {
   let isOpen = false;
 
