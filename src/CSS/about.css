@@ -90,6 +90,9 @@
     z-index: 1;
     background: var(--background-about);
   }
+  .about_wrapper-text-esp {
+    gap: 12px;
+  }
   .about_img {
     width: 427px;
     height: 440px;
@@ -124,6 +127,9 @@
     gap: 16px;
     z-index: 1;
     background: var(--background-about);
+  }
+  .about_wrapper-text-esp {
+    gap: 8px;
   }
   .about_img {
     width: 528px;

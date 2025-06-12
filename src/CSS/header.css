@@ -195,7 +195,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 56px;
+    gap: 46px;
+  }
+  .header_nav-list-rus {
+    gap: 20px;
+  }
+  .header_nav-list-esp {
+    gap: 36px;
   }
   .header_contact-item {
     width: 209px;
@@ -289,13 +295,15 @@
     align-items: center;
     gap: 32px;
   }
-
   .header_nav-list {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 56px;
+  }
+  .header_nav-list-rus {
+    gap: 36px;
   }
   .header_contact-item {
     width: 209px;
