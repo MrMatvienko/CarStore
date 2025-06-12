@@ -16,10 +16,10 @@ export async function getAllCars() {
 export async function addNewCar(data) {
   try {
     const response = await axios.post("/cars", data);
-    console.log("Успішно додано:", response.data);
+    console.log("SUCCESS:", response.data);
     return response.data;
   } catch (error) {
-    console.error("Помилка при додаванні авто:", error);
+    console.error("ERROR:", error);
     throw error;
   }
 }

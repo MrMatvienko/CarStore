@@ -7,18 +7,19 @@ export function carList() {
     li.classList.add("car-card");
 
     li.innerHTML = `
+    <img class="car_img" src="${car.images[0].url}" alt="auto" />
     <div class="car_info">
       <div class="car_item-text">
         <h3 class="car_info-title">${car.title}</h3>
         <p class="car_info-price">$${car.price}</p>
-        <div>
+        <div class="car_info-subtext">
           <div class="car_info-subwrapper">
             <p class="car_info-text">Release date</p>
-            <p class="car_info-text">${car.year}</p>
+            <p class="car_info-text text-color">${car.year}</p>
           </div>
           <div class="car_info-subwrapper">
             <p class="car_info-text">Mileage</p>
-            <p class="car_info-text">${car.mileage} mi</p>
+            <p class="car_info-text text-color">${car.mileage} mi</p>
           </div>
         </div>
       </div>

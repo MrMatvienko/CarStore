@@ -21,7 +21,7 @@
           </div>
           <div class="form_label-wraper">
             <label for="price">Price</label>
-            <input type="text" name="price" id="price" />
+            <input type="number" name="price" id="price" />
           </div>
           <div class="form_label-wraper">
             <label for="brand">Brand</label>
@@ -29,11 +29,22 @@
           </div>
           <div class="form_label-wraper">
             <label for="mileage">Mileage</label>
-            <input type="text" name="mileage" id="mileage" />
+            <input type="number" name="mileage" id="mileage" />
           </div>
           <div class="form_label-wraper">
             <label for="year">Year</label>
-            <input type="text" name="year" id="year" />
+            <input type="number" name="year" id="year" />
+          </div>
+          <div class="form_label-wraper">
+            <label for="images">Images </label>
+            <input
+              type="file"
+              name="images"
+              accept="image/*"
+              id="images"
+              multiple
+              required
+            />
           </div>
           <button class="add_btn">+add</button>
         </form>
