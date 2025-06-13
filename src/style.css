@@ -6,6 +6,7 @@
 @import url(./CSS/car.css);
 @import url(./CSS/contact.css);
 @import url(./CSS/footer.css);
+@import url(./CSS/car-modal.css);
 
 :root {
   --black: #000c1f;
@@ -16,6 +17,7 @@
   --white: #f7fafd;
   --grey: #7c7b89;
   --white-500: rgba(234, 248, 255, 0.6);
+  --white-600: rgba(213, 217, 219, 0.9);
   --background-about: #eaf8ff;
   --black-bgrnd: #020d18;
 
@@ -27,7 +29,6 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {

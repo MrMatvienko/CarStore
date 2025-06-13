@@ -91,6 +91,7 @@
   box-shadow: 2px 3px 10px 1px rgba(198, 82, 2, 0.44);
   background: var(--orange);
   margin-top: 32px;
+  cursor: pointer;
 }
 .car_info-article {
   position: absolute;

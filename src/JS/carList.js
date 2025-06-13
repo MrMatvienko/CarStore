@@ -1,12 +1,11 @@
 import { getAllCars } from "../API/api";
+import { buyContact } from "./modal-contact";
 
-export function carList() {
-  const container = document.querySelector(".car_list-wrapper");
-  function createCarCard(car) {
-    const li = document.createElement("li");
-    li.classList.add("car-card");
+function createCarCard(car) {
+  const li = document.createElement("li");
+  li.classList.add("car-card");
 
-    li.innerHTML = `
+  li.innerHTML = `
     <img class="car_img" src="${car.images[0].url}" alt="auto" />
     <div class="car_info">
       <div class="car_item-text">
@@ -28,19 +27,28 @@ export function carList() {
     </div>
   `;
 
-    return li;
+  return li;
+}
+
+export async function renderCarsList() {
+  // Змінив назву з carList на renderCarsList, щоб уникнути плутанини
+  const container = document.querySelector(".car_list-wrapper");
+  if (!container) {
+    console.error("Елемент '.car_list-wrapper' не знайдено.");
+    return;
   }
-  async function renderCars() {
-    try {
-      const cars = await getAllCars();
-      cars.forEach((car) => {
-        const item = createCarCard(car);
-        container.appendChild(item);
-      });
-      console.log(cars);
-    } catch (error) {
-      container.innerHTML = "<li>Не вдалося завантажити список авто.</li>";
-    }
+  container.innerHTML = ""; // Очищаємо контейнер перед додаванням нових карток
+
+  try {
+    const cars = await getAllCars();
+    cars.forEach((car) => {
+      const item = createCarCard(car);
+      container.appendChild(item);
+    });
+    console.log(cars);
+    buyContact();
+  } catch (error) {
+    console.error("Помилка завантаження або рендерингу авто:", error);
+    container.innerHTML = "<li>Не вдалося завантажити список авто.</li>";
   }
-  renderCars();
 }

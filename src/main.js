@@ -1,11 +1,11 @@
 import { formSend } from "./JS/form";
 import { burgerMenu } from "./JS/modal-menu";
-import { carList } from "./JS/carList";
+import { renderCarsList } from "./JS/carList";
 
 document.addEventListener("DOMContentLoaded", () => {
   burgerMenu();
   formSend();
-  carList();
+  renderCarsList();
 });
 
 const arrowSelects = document.querySelectorAll(".arrow_select");
