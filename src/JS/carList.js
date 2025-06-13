@@ -31,13 +31,12 @@ function createCarCard(car) {
 }
 
 export async function renderCarsList() {
-  // Змінив назву з carList на renderCarsList, щоб уникнути плутанини
   const container = document.querySelector(".car_list-wrapper");
   if (!container) {
-    console.error("Елемент '.car_list-wrapper' не знайдено.");
+    console.error("Element '.car_list-wrapper' dont find.");
     return;
   }
-  container.innerHTML = ""; // Очищаємо контейнер перед додаванням нових карток
+  container.innerHTML = "";
 
   try {
     const cars = await getAllCars();
@@ -45,10 +44,9 @@ export async function renderCarsList() {
       const item = createCarCard(car);
       container.appendChild(item);
     });
-    console.log(cars);
     buyContact();
   } catch (error) {
-    console.error("Помилка завантаження або рендерингу авто:", error);
-    container.innerHTML = "<li>Не вдалося завантажити список авто.</li>";
+    console.error("Error render car:", error);
+    container.innerHTML = "<li>Sorry, data base dont working!</li>";
   }
 }

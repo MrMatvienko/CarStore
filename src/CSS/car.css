@@ -7,7 +7,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 41px;
+  gap: 80px;
 }
 .car_wrapper h2 {
   font-family: var(--second-family);
@@ -127,12 +127,12 @@
 }
 .car_fillter {
   position: absolute;
-  top: 0;
+  top: 60px;
   right: 0;
   border: 0.5px solid var(--blue);
   border-radius: 10px;
   background: var(--background-checkbox);
-  width: 249px;
+  width: 172px;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -189,8 +189,9 @@
   font-weight: 500;
   font-size: 20px;
   border-radius: 10px;
-  width: 217px;
+  width: 145px;
   height: 48px;
+  cursor: pointer;
 }
 .fillter_ok-btn {
   color: var(--white);
@@ -202,4 +203,17 @@
   color: var(--blue);
   border: 0.5px solid var(--blue);
   background: #fff;
+}
+
+@media screen and (min-width: 746px) {
+  .car-wrapper {
+    gap: 41px;
+  }
+  .car_fillter {
+    top: 0;
+    width: 249px;
+  }
+  .btn {
+    width: 217px;
+  }
 }
