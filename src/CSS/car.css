@@ -152,18 +152,26 @@
   height: 24px;
   fill: none;
   stroke: var(--black);
+  cursor: pointer;
 }
 .car_checkbox {
   display: none;
   justify-content: center;
   align-items: center;
 }
+.car_checkbox.show {
+  display: flex;
+}
+
 .car_fillter-text,
 .filter_btn-box,
 .car_checkbox-list {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.car_fillter-text {
+  cursor: pointer;
 }
 .filter_btn-box,
 .car_checkbox,
