@@ -1,5 +1,6 @@
 import { getAllCars } from "../API/api";
 import { buyContact } from "./modal-contact";
+import { getSelectList } from "./select-list";
 
 function createCarCard(car) {
   const li = document.createElement("li");
@@ -45,6 +46,7 @@ export async function renderCarsList() {
       container.appendChild(item);
     });
     buyContact();
+    getSelectList();
   } catch (error) {
     console.error("Error render car:", error);
     container.innerHTML = "<li>Sorry, data base dont working!</li>";

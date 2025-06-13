@@ -217,3 +217,42 @@
     width: 217px;
   }
 }
+.car_checkbox-list {
+  width: 100%;
+  padding-top: 12px;
+  border-top: 1px solid var(--grey);
+  margin-top: 4px;
+}
+.chekbox-item {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 16px;
+}
+.check_box-custom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--black);
+  border-radius: 3px;
+  width: 24px;
+  height: 24px;
+  padding: 2px;
+  cursor: pointer;
+}
+.check_box-checked {
+  border-radius: 3px;
+  width: 20px;
+  height: 20px;
+}
+.check_box-checked.check {
+  background-color: var(--blue);
+}
+.check_box-text {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  color: var(--black);
+}
