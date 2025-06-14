@@ -198,6 +198,10 @@
   box-shadow: 2px 3px 10px 1px rgba(124, 123, 137, 0.55);
   background: var(--grey);
   border: none;
+  transition: all 300ms ease;
+}
+.fillter_ok-btn.search {
+  background: var(--blue);
 }
 .fillter_clear-btn {
   color: var(--blue);
@@ -238,7 +242,7 @@
   border-radius: 3px;
   width: 24px;
   height: 24px;
-  padding: 2px;
+  padding: 2px 1px;
   cursor: pointer;
 }
 .check_box-checked {

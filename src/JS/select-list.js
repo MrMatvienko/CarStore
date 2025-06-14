@@ -1,4 +1,5 @@
 import { getAllCars } from "../API/api";
+import { useFillter } from "./fillter";
 
 export function getSelectList() {
   const container = document.querySelector(".car_checkbox-list");
@@ -22,6 +23,7 @@ export function getSelectList() {
         const item = createCheckBox(car);
         container.appendChild(item);
       });
+      useFillter();
     } catch (error) {
       container.innerHTML = "<li> Sorry, brand dont find </li>";
     }
