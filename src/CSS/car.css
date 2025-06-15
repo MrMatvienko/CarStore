@@ -86,6 +86,10 @@
   background: var(--orange);
   margin-top: 32px;
   cursor: pointer;
+  transition: all 300ms ease;
+}
+.car_list-btn:hover {
+  background: var(--orange-hover);
 }
 .car_info-article {
   position: absolute;
@@ -103,11 +107,25 @@
   font-size: 20px;
   color: var(--white);
   border-radius: 25px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
   width: 194px;
   height: 64px;
   border: none;
   box-shadow: 2px 3px 10px 1px rgba(7, 64, 129, 0.55);
   background: var(--blue);
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+.car_more-btn:hover {
+  scale: 1.1;
+}
+.car_load-icon {
+  width: 36px;
+  height: 36px;
+  fill: none;
+  stroke: var(--white);
 }
 .car_img {
   max-width: 336px;
@@ -153,6 +171,12 @@
   fill: none;
   stroke: var(--black);
   cursor: pointer;
+  border-radius: 50%;
+  transition: all 300ms ease;
+}
+.fillter-icon-arrow:hover {
+  stroke: var(--white);
+  background: var(--grey);
 }
 .car_checkbox {
   display: none;
@@ -247,6 +271,7 @@
   letter-spacing: 0.01em;
   color: var(--black);
 }
+
 @media screen and (min-width: 746px) {
   .car-wrapper {
     gap: 41px;

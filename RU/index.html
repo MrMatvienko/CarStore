@@ -250,14 +250,14 @@
     <section class="car" id="car-list">
       <div class="container car_wrapper">
         <div class="car_fillter-wrapper">
-          <h2>Car for sale</h2>
+          <h2>Автомобили</h2>
           <div class="car_fillter">
             <div class="car_fillter-container">
               <div class="car_fillter-text">
                 <svg class="fillter-icon">
                   <use href="../src/image/sprite.svg#icon-filter"></use>
                 </svg>
-                <p>All cars</p>
+                <p>Фильтр</p>
               </div>
               <svg class="fillter-icon-arrow">
                 <use href="../src/image/sprite.svg#icon-arrow"></use>
@@ -267,14 +267,19 @@
               <ul class="car_checkbox-list"></ul>
               <div class="filter_btn-box">
                 <button class="fillter_ok-btn btn">OK</button>
-                <button class="fillter_clear-btn btn">Clear filters</button>
+                <button class="fillter_clear-btn btn">Очистить фильтр</button>
               </div>
             </div>
           </div>
         </div>
         <div class="car_wrapper-sub">
           <ul class="car_list-wrapper"></ul>
-          <button class="car_more-btn">View more</button>
+          <button class="car_more-btn">
+            <svg class="car_load-icon">
+              <use href="../src/image/sprite.svg#icon-load"></use>
+            </svg>
+            Показать еще
+          </button>
         </div>
       </div>
     </section>
@@ -553,6 +558,18 @@
         </div>
       </div>
     </div>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "3yC9tSBfO-7Mhrlor",
+        });
+      })();
+    </script>
 
     <script type="module" src="../src/main.js"></script>
   </body>
