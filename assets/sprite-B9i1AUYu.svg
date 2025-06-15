@@ -70,5 +70,9 @@
 <path d="M26.372 9.333c-0.152 0.299-0.358 0.571-0.616 0.797l-8 7c-1.005 0.88-2.508 0.88-3.513 0l-8-7c-0.258-0.226-0.464-0.498-0.616-0.797h20.745zM25.333 2.667c0.736 0 1.333 0.597 1.333 1.333v2.667h-21.333v-2.667c0-0.736 0.597-1.333 1.333-1.333h18.667z"></path>
 <path  d="M18.667 22.272l-5.333 2.667v-11.605h5.333v8.939z"></path>
 </symbol>
+<symbol id="icon-load" viewBox="0 0 32 32">
+<path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="1.7778" d="M24 16l-8 8-8-8"></path>
+<path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="1.7778" d="M24 8l-8 8-8-8"></path>
+</symbol>
 </defs>
 </svg>
