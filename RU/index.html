@@ -247,8 +247,36 @@
       </div>
     </section>
 
-    <section class="car container" id="car-list">
-      <h2>Car list to soon...</h2>
+    <section class="car" id="car-list">
+      <div class="container car_wrapper">
+        <div class="car_fillter-wrapper">
+          <h2>Car for sale</h2>
+          <div class="car_fillter">
+            <div class="car_fillter-container">
+              <div class="car_fillter-text">
+                <svg class="fillter-icon">
+                  <use href="../src/image/sprite.svg#icon-filter"></use>
+                </svg>
+                <p>All cars</p>
+              </div>
+              <svg class="fillter-icon-arrow">
+                <use href="../src/image/sprite.svg#icon-arrow"></use>
+              </svg>
+            </div>
+            <div class="car_checkbox">
+              <ul class="car_checkbox-list"></ul>
+              <div class="filter_btn-box">
+                <button class="fillter_ok-btn btn">OK</button>
+                <button class="fillter_clear-btn btn">Clear filters</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="car_wrapper-sub">
+          <ul class="car_list-wrapper"></ul>
+          <button class="car_more-btn">View more</button>
+        </div>
+      </div>
     </section>
 
     <section class="contact" id="contact">
@@ -495,6 +523,36 @@
         </div>
       </div>
     </footer>
+
+    <div class="car_modal">
+      <div class="car_modal-container">
+        <div class="car_modal-wrapper">
+          <svg class="car_icon-close">
+            <use href="../src/image/sprite.svg#icon-close"></use>
+          </svg>
+          <h2 class="car_title">Contact us</h2>
+          <div class="car_modal-contact">
+            <div class="car_modal-content">
+              <p class="car_modal-text">Phone</p>
+              <a class="car_modal-link" href="tel:+13059224050"
+                >+1 305 922 40 50</a
+              >
+            </div>
+            <div class="car_modal-content">
+              <p class="car_modal-text">Messenger</p>
+              <div class="modal_social">
+                <svg>
+                  <use href="../src/image/sprite.svg#icon-whatsapp"></use>
+                </svg>
+                <svg>
+                  <use href="../src/image/sprite.svg#icon-telegram"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script type="module" src="../src/main.js"></script>
   </body>
