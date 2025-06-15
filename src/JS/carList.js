@@ -1,6 +1,24 @@
 import { getAllCars } from "../API/api";
 import { buyContact } from "./modal-contact";
 
+const translations = {
+  en: {
+    releaseDate: "Release date",
+    mileage: "Mileage",
+    getIt: "Get it!",
+  },
+  es: {
+    releaseDate: "Fecha de lanzamiento",
+    mileage: "Kilometraje",
+    getIt: "¡Cómpralo!",
+  },
+  ru: {
+    releaseDate: "Дата выпуска",
+    mileage: "Пробег",
+    getIt: "Купить!",
+  },
+};
+
 let currentPage = 1;
 const limit = 6;
 let isLastPage = false;
@@ -17,6 +35,13 @@ export function getSelectedBrand() {
 }
 
 function createCarCard(car) {
+  const path = window.location.pathname;
+  let lang = "en";
+  if (path.includes("/es/")) lang = "es";
+  else if (path.includes("/ru/")) lang = "ru";
+
+  const t = translations[lang];
+
   const li = document.createElement("li");
   li.classList.add("car-card");
 
@@ -28,16 +53,16 @@ function createCarCard(car) {
         <p class="car_info-price">$${car.price}</p>
         <div class="car_info-subtext">
           <div class="car_info-subwrapper">
-            <p class="car_info-text">Release date</p>
+            <p class="car_info-text">${t.releaseDate}</p>
             <p class="car_info-text text-color">${car.year}</p>
           </div>
           <div class="car_info-subwrapper">
-            <p class="car_info-text">Mileage</p>
+            <p class="car_info-text">${t.mileage}</p>
             <p class="car_info-text text-color">${car.mileage} mi</p>
           </div>
         </div>
       </div>
-      <button class="car_list-btn">Get it!</button>
+      <button class="car_list-btn">${t.getIt}</button>
       <p class="car_info-article">#${car.article}</p>
     </div>
   `;
