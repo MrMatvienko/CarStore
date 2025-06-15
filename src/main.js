@@ -2,12 +2,14 @@ import { formSend } from "./JS/form";
 import { burgerMenu } from "./JS/modal-menu";
 import { renderCarsList } from "./JS/carList";
 import { selectFiller } from "./JS/select";
+import { getSelectList } from "./JS/select-list";
 
 document.addEventListener("DOMContentLoaded", () => {
   burgerMenu();
   formSend();
   renderCarsList();
   selectFiller();
+  getSelectList();
 });
 
 const arrowSelects = document.querySelectorAll(".arrow_select");

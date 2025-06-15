@@ -208,19 +208,6 @@
   border: 0.5px solid var(--blue);
   background: #fff;
 }
-
-@media screen and (min-width: 746px) {
-  .car-wrapper {
-    gap: 41px;
-  }
-  .car_fillter {
-    top: 0;
-    width: 249px;
-  }
-  .btn {
-    width: 217px;
-  }
-}
 .car_checkbox-list {
   width: 100%;
   padding-top: 12px;
@@ -259,4 +246,16 @@
   line-height: 1.5;
   letter-spacing: 0.01em;
   color: var(--black);
+}
+@media screen and (min-width: 746px) {
+  .car-wrapper {
+    gap: 41px;
+  }
+  .car_fillter {
+    top: 0;
+    width: 249px;
+  }
+  .btn {
+    width: 217px;
+  }
 }

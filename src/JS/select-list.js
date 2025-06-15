@@ -1,32 +1,36 @@
-import { getAllCars } from "../API/api";
+import { getAllBrands } from "../API/api";
 import { useFillter } from "./fillter";
+// let isFilterInitialized = false;
 
 export function getSelectList() {
   const container = document.querySelector(".car_checkbox-list");
-  function createCheckBox(car) {
-    const li = document.createElement("li");
-    li.classList.add("chekbox-item");
-
-    li.innerHTML = `
-    <div class="check_box-custom">
-    <div class="check_box-checked"></div>
-    </div>
-    <p class="check_box-text">${car.brand}</p>
-    `;
-    return li;
-  }
 
   async function renderCheckBox() {
     try {
-      const cars = await getAllCars();
-      cars.forEach((car) => {
-        const item = createCheckBox(car);
+      container.innerHTML = "";
+
+      const brands = await getAllBrands();
+      const uniqueBrands = [...new Set(brands)];
+
+      uniqueBrands.forEach((brand) => {
+        const item = document.createElement("li");
+        item.classList.add("chekbox-item");
+        item.innerHTML = `
+          <div class="check_box-custom">
+            <div class="check_box-checked"></div>
+          </div>
+          <p class="check_box-text">${brand}</p>
+        `;
         container.appendChild(item);
       });
+      // if (!isFilterInitialized) {
+      //   isFilterInitialized = true;
+      // }
       useFillter();
     } catch (error) {
-      container.innerHTML = "<li> Sorry, brand dont find </li>";
+      container.innerHTML = "<li> Вибачте, бренди не знайдено </li>";
     }
   }
+
   renderCheckBox();
 }
