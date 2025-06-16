@@ -74,5 +74,11 @@
 <path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="1.7778" d="M24 16l-8 8-8-8"></path>
 <path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="1.7778" d="M24 8l-8 8-8-8"></path>
 </symbol>
+<symbol id="icon-prev" viewBox="0 0 21 32">
+<path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="4.5714" d="M18.286 2.286l-13.714 13.714 13.714 13.714"></path>
+</symbol>
+<symbol id="icon-next" viewBox="0 0 21 32">
+<path stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="4.5714" d="M2.286 2.286l13.714 13.714-13.714 13.714"></path>
+</symbol>
 </defs>
 </svg>
