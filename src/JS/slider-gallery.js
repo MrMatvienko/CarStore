@@ -3,37 +3,61 @@ export function sliderGallery() {
   const prevBtn = document.querySelector(".btn-prev");
   const nextBtn = document.querySelector(".btn-next");
   const items = galeryContainer.querySelectorAll(".car_gallery-item");
-  console.log(items.length);
-  let offset = 0;
 
+  let offset = 0;
   const screenWidth = window.innerWidth;
   let step;
 
-  if (screenWidth >= 394 && screenWidth < 746) {
-    step = 329;
-  } else if (screenWidth >= 746 && screenWidth < 1280) {
-    step = 616;
-  } else if (screenWidth >= 1280) {
+  if (screenWidth >= 1280) {
     step = 648;
+  } else if (screenWidth >= 746) {
+    step = 616;
+  } else {
+    step = 329;
   }
 
   const width = items.length * step - step;
-  console.log(width);
-  prevBtn.addEventListener("click", () => {
-    offset = offset - step;
-    if (offset < 0) {
-      offset = width;
-    }
 
+  function updatePosition() {
     galeryContainer.style.left = -offset + "px";
-    console.log(offset);
+  }
+
+  prevBtn?.addEventListener("click", () => {
+    offset -= step;
+    if (offset < 0) offset = width;
+    updatePosition();
   });
-  nextBtn.addEventListener("click", () => {
-    offset = offset + step;
-    if (offset > width) {
-      offset = 0;
+
+  nextBtn?.addEventListener("click", () => {
+    offset += step;
+    if (offset > width) offset = 0;
+    updatePosition();
+  });
+
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  galeryContainer.addEventListener("touchstart", (e) => {
+    touchStartX = e.touches[0].clientX;
+  });
+
+  galeryContainer.addEventListener("touchend", (e) => {
+    touchEndX = e.changedTouches[0].clientX;
+    handleSwipe();
+  });
+
+  function handleSwipe() {
+    const swipeDistance = touchEndX - touchStartX;
+    const minSwipe = 50;
+
+    if (swipeDistance > minSwipe) {
+      offset -= step;
+      if (offset < 0) offset = width;
+      updatePosition();
+    } else if (swipeDistance < -minSwipe) {
+      offset += step;
+      if (offset > width) offset = 0;
+      updatePosition();
     }
-    galeryContainer.style.left = -offset + "px";
-    console.log(offset);
-  });
+  }
 }
