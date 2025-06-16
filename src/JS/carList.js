@@ -83,7 +83,7 @@ export async function loadCars() {
       limit,
       brand: getSelectedBrand(),
     });
-    console.log(cars);
+
     if (cars.length < limit) {
       isLastPage = true;
       moreBtn.style.display = "none";
