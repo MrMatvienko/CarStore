@@ -55,7 +55,8 @@
 .car_modal-link:hover {
   color: var(--orange);
 }
-.car_icon-close {
+.car_icon-close,
+.close_gallery {
   width: 24px;
   height: 24px;
   border-radius: 50%;

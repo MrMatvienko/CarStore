@@ -1,4 +1,5 @@
 import { getAllCars } from "../API/api";
+import { openGallery } from "./gallery-open";
 import { buyContact } from "./modal-contact";
 
 const translations = {
@@ -46,7 +47,11 @@ function createCarCard(car) {
   li.classList.add("car-card");
 
   li.innerHTML = `
-    <img class="car_img" src="${car.images[0].url}" alt="${car.title}" />
+    <img class="car_img"
+    src="${car.images[0].url}" 
+    alt="${car.title}" 
+    data-images='${JSON.stringify(car.images)}'  
+    data-title="${car.title}" />
     <div class="car_info">
       <div class="car_item-text">
         <h3 class="car_info-title">${car.title}</h3>
@@ -78,7 +83,7 @@ export async function loadCars() {
       limit,
       brand: getSelectedBrand(),
     });
-
+    console.log(cars);
     if (cars.length < limit) {
       isLastPage = true;
       moreBtn.style.display = "none";
@@ -88,7 +93,7 @@ export async function loadCars() {
       const item = createCarCard(car);
       container.appendChild(item);
     });
-
+    openGallery();
     buyContact();
     currentPage += 1;
   } catch (error) {
