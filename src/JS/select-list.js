@@ -1,6 +1,5 @@
 import { getAllBrands } from "../API/api";
 import { useFillter } from "./fillter";
-// let isFilterInitialized = false;
 
 export function getSelectList() {
   const container = document.querySelector(".car_checkbox-list");
@@ -23,9 +22,6 @@ export function getSelectList() {
         `;
         container.appendChild(item);
       });
-      // if (!isFilterInitialized) {
-      //   isFilterInitialized = true;
-      // }
       useFillter();
     } catch (error) {
       container.innerHTML = "<li> Вибачте, бренди не знайдено </li>";

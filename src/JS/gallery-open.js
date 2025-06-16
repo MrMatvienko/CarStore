@@ -38,5 +38,15 @@ export function openGallery() {
         galleryList.innerHTML = "";
       });
     }
+    modalGallery.addEventListener("click", (event) => {
+      if (event.target === modalGallery) {
+        closeGallery();
+      }
+    });
+
+    function closeGallery() {
+      modalGallery.classList.remove("open");
+      galleryList.innerHTML = "";
+    }
   }
 }
