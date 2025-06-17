@@ -169,10 +169,6 @@
   .header_wrapper {
     height: 131px;
   }
-  .header_logo {
-    width: 120px;
-    height: 67px;
-  }
   .header_nav-container {
     position: relative;
     height: auto;
@@ -279,7 +275,7 @@
     flex-direction: column;
     gap: 52px;
   }
-  .header_logo {
+  .header_logo img {
     width: 160px;
     height: 89px;
   }
