@@ -9,7 +9,10 @@ export function newCar() {
 
     formData.append("title", document.getElementById("title-car").value.trim());
     formData.append("price", document.getElementById("price").value);
-    formData.append("brand", document.getElementById("brand").value.trim());
+    formData.append(
+      "brand",
+      document.getElementById("brand").value.trim().toUpperCase()
+    );
     formData.append("mileage", document.getElementById("mileage").value);
     formData.append("year", document.getElementById("year").value);
 

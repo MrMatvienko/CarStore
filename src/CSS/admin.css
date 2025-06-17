@@ -16,17 +16,19 @@
   flex-direction: column;
   gap: 20px;
 }
-.form_add-car {
+.form_add-car,
+.form_delete {
   max-width: 600px;
   width: 100%;
   padding: 20px;
+  background-color: var(--background-admin-form);
   border: 1px solid black;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
 }
 .form_label-wraper {
   width: 100%;
@@ -35,7 +37,7 @@
   justify-content: center;
 }
 .form_label-wraper label {
-  max-width: 50px;
+  max-width: 60px;
   width: 100%;
 }
 .form_label-wraper input {
@@ -43,7 +45,8 @@
   width: 100%;
   padding: 5px;
 }
-.add_btn {
+.add_btn,
+.delete_btn {
   padding: 5px 20px;
   background-color: rgb(240, 240, 233);
   border: 1px solid;
@@ -51,9 +54,11 @@
   cursor: pointer;
   transition: all 300ms ease;
 }
-.add_btn:hover {
+.add_btn:hover,
+.delete_btn:hover {
   background-color: rgb(150, 155, 155);
 }
-.add_btn:focus {
+.add_btn:focus,
+.delete_btn:hover {
   background-color: rgb(125, 129, 129);
 }
