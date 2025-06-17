@@ -1,6 +1,7 @@
 import axios from "axios";
 
 const BASE_URL = "https://carservice-pgcn.onrender.com/api/v1";
+// const BASE_URL = "http://localhost:3000/api/v1/";
 axios.defaults.baseURL = BASE_URL;
 
 export async function getAllCars({ page = 1, limit = 6, brand = "" }) {
@@ -41,5 +42,15 @@ export async function getAllBrands() {
   } catch (error) {
     console.error("ERROR brands list:", error);
     throw error;
+  }
+}
+export async function loginAdmin(password) {
+  try {
+    const response = await axios.post("/cars/admin-login", { password });
+    return response.data;
+  } catch (error) {
+    const message =
+      error.response?.data?.message || "Login failed. Server error.";
+    throw new Error(message);
   }
 }

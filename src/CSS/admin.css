@@ -62,3 +62,36 @@
 .delete_btn:hover {
   background-color: rgb(125, 129, 129);
 }
+.admin_auth {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  background: rgba(0, 12, 31, 0.7);
+  backdrop-filter: blur(20px);
+  z-index: 3;
+}
+.admin_form-auth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 25px;
+  border-radius: 5px;
+  gap: 15px;
+  background-color: var(--black);
+}
+.admin_form-auth label {
+  color: var(--white);
+}
+.admin_form-auth input {
+  font-size: 16px;
+  padding: 5px;
+}
+.admin_form-btn {
+  padding: 5px 10px;
+  cursor: pointer;
+}

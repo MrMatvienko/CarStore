@@ -10,7 +10,7 @@ export function deleteSoldCar() {
 
     try {
       await deleteCar(article);
-      console.log("SUCCESS");
+      alert("SUCCESS");
       form.reset();
     } catch (error) {
       console.log(error);
