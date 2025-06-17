@@ -13,26 +13,24 @@ export function newCar() {
     formData.append("mileage", document.getElementById("mileage").value);
     formData.append("year", document.getElementById("year").value);
 
-    // Зміни для завантаження кількох файлів
-    const imageInput = document.getElementById("images"); // Отримуємо інпут за ID 'images'
-    const imageFiles = imageInput.files; // Це FileList, що містить всі вибрані файли
+    const imageInput = document.getElementById("images");
+    const imageFiles = imageInput.files;
 
     if (imageFiles.length === 0) {
-      alert("Будь ласка, виберіть хоча б одне зображення.");
+      alert("Select one or more car photos!");
       return;
     }
 
-    // Перебираємо FileList і додаємо кожен файл окремо до FormData
     for (let i = 0; i < imageFiles.length; i++) {
-      formData.append("images", imageFiles[i]); // Зверніть увагу: ім'я поля 'images'
+      formData.append("images", imageFiles[i]);
     }
 
     try {
       await addNewCar(formData);
-      alert("Авто успішно додано!");
+      alert("Succes add new car!");
       form.reset();
     } catch (err) {
-      alert("Сталася помилка при додаванні авто.");
+      alert("Sorry add error");
     }
   });
 }
