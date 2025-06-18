@@ -1,0 +1,40 @@
+# Увімкнути mod_rewrite
+RewriteEngine On
+
+# Примусово HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Видалити www
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
+
+# Редирект index.html → /
+RewriteRule ^(index\.html)?$ / [R=301,L]
+
+# Доступ до sitemap і robots.txt
+<FilesMatch "^(sitemap\.xml|robots\.txt)$">
+  Require all granted
+</FilesMatch>
+
+# Захист .htaccess
+<Files .htaccess>
+  Order allow,deny
+  Deny from all
+</Files>
+
+# Кешування статичних ресурсів
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+</IfModule>
+
+# Опціонально: захист адмінки (якщо не авторизована через JS)
+<Directory "admin">
+  Options -Indexes
+</Directory>
