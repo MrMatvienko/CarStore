@@ -63,9 +63,6 @@
   fill: var(--black);
   border-radius: 5px;
 }
-.icon_mode:focus {
-  background: var(--white-500);
-}
 .header_burger {
   width: 24px;
   height: 24px;
